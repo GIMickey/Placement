@@ -1,0 +1,42 @@
+# Clone the following test code to have an app to scan on Google Cloud Platform
+git clone https://github.com/GoogleCloudPlatform/python-docs-samples
+
+# Then go to the directory that contains the sample code:
+cd python-docs-samples/appengine/standard_python37/hello_world
+
+# Test App
+# From within the hello_world directory where the app's app.yaml configuration file is located, start the local development server with the following command:
+
+dev_appserver.py app.yaml
+
+# The local development server is now running and listening for requests on port 8080. Click on the web preview button in Cloud Shell, and select Preview on port 8080 to see it:
+# If you cannot see the web preview icon, close the Navigation menu, top left corner.
+# Press Ctrl+c to stop the local app and return to the command line.
+
+# Deploy App
+# Deploy your app to App Engine by running the following command from within the root directory of your application (hello_world):
+
+gcloud app deploy
+
+# You'll be asked to select a region. Choose the number for one that is near where you are.
+# After the app is created in your lab, you'll be asked if you want to continue. Click Y to continue.
+# Deployment of your app will then begin.
+
+# View App
+# To launch the app in your browser, run the following command:
+
+gcloud app browse
+
+# There will be a link in Cloud Shell that you can use, or view the app at https://beaming-magnet-276815.ew.r.appspot.com
+# This is the URL you'll scan for vulnerabilities and it will be added to your scan parameters in the next step.
+
+# Run the scan
+# The scan does not run immediately, but is queued for later execution; it can take hours before the scan executes, depending on current load. 
+# Go to Navigation menu > App Engine > Security scans:
+# Click Enable API > Create scan.
+# Under Starting URLs, enter the URL of the application you want to scan.
+# Click Save to create the scan.
+# Click Run to start scanning:
+
+The scan will be queued, and you can watch the status bar progress as it scans. The scan overview page displays a results section when the scan completes. The following image shows example scan results when no vulnerabilities are detected:
+
