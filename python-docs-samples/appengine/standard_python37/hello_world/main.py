@@ -24,7 +24,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     """Return a friendly HTTP greeting."""
-    return 'Hello World!'
+    return 'Hello World! <br> <a href="/second">Next Page</a>'
 
 @app.route('/second')
 def hello_again():
