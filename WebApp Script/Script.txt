@@ -1,19 +1,18 @@
+#Login to Google Cloud Platform
+#Open a Console Windows
+#Copy code below
+
 # Clone the following test code to have an app to scan on Google Cloud Platform
 git clone https://github.com/GIMickey/Placement.git
 
-# Then go to the directory that contains the sample code:
-cd WebApp
+# Then go to the directory that contains the test code:
+cd Placement/WebApp
 
-# Test App
-dev_appserver.py app.yaml
+# Deploy App, this will take from 60 to 90 seconds
+gcloud --quiet app deploy
 
-# Deploy App
-gcloud app deploy
-
-
-# View App
+# View App in the browser
 gcloud app browse
-
 
 # Run the scan
 # The scan does not run immediately, but is queued for later execution; it can take hours before the scan executes, depending on current load. 
@@ -21,6 +20,4 @@ gcloud app browse
 # Click Enable API > Create scan.
 # Under Starting URLs, enter the URL of the application you want to scan.
 # Click Save to create the scan.
-# Click Run to start scanning:
-
-
+# Click Run to start scanning.

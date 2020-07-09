@@ -29,7 +29,7 @@ def hello():
 @app.route('/second')
 def hello_again():
     """Return a message on Page 2."""
-    return 'Web application on Google Cloud Platform.'
+    return 'Web application on Google Cloud Platform. <br> <a href="/">Previous Page</a>'
 
 
 if __name__ == '__main__':
