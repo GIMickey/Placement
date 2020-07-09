@@ -23,8 +23,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    """Return a friendly HTTP greeting."""
-    return 'Hello World!'
+    """Return a message on Page 1."""
+    return 'To be scanned by the Google Cloud Scanner. <br> <a href="/second">Next Page</a>'
+    
+@app.route('/second')
+def hello_again():
+    """Return a message on Page 2."""
+    return 'Web application on Google Cloud Platform.'
 
 
 if __name__ == '__main__':
