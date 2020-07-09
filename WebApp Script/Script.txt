@@ -1,5 +1,3 @@
-dev_a	
-
 # Clone the following test code to have an app to scan on Google Cloud Platform
 git clone https://github.com/GIMickey/Placement.git
 
